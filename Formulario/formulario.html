@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--
+Implementar uma interface, utilizando os conhecimentos adquiridos em 
+formulários html e javascript para validar os campos. Utilize a folha de estilos
+que se encontra disponível no blackboard.
+Criar uma página em linguagem PHP para receber os dados deste formulário;
+-->
+<html>
+    <head>
+        <title>Formulário</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="resources/css/estilo.css" media="screen"/>
+        <script type="text/javascript" src="formulario.js"></script>
+    </head>
+    <body>
+        <form name="frm1" action="formulario.php" method="get" onsubmit="return validaCampos();">
+            <fieldset>
+                <legend>Dados do Funcionário:</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label class="rotulos">Nome:</label>                            
+                        </td>
+                        <td>
+                            <input type="text" name="txtNome" id="txtNome" size="20" maxlength="40" class="edit"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="rotulos">RG:</label>                            
+                        </td>
+                        <td>
+                            <input type="text" name="txtRg" id="txtRg" size="20" maxlength="40" class="edit"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="rotulos">CPF:</label>                            
+                        </td>
+                        <td>
+                            <input type="text" name="txtCpf" id="txtCpf" size="20" maxlength="40" class="edit"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="rotulos">Sexo:</label>
+                        </td>
+                        <td class="edit">
+                            <input type="radio" name="txtSexo" id="txtSexoM" value="Masculino"/>Masculino
+                            <input type="radio" name="txtSexo" id="txtSexoF" value="Feminino"/>Feminino
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Dados Financeiros:</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label class="rotulos">Salário:</label>                            
+                        </td>
+                        <td>
+                            <input type="text" name="txtSalario" id="txtSalario" size="20" maxlength="40" class="edit"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="rotulos">Horas Extras:</label>                            
+                        </td>
+                        <td>
+                            <input type="text" name="txtHoras" id="txtHoras" size="20" maxlength="40" class="edit"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label class="rotulos">Turno de trabalho:</label>
+                        </td>
+                        <td class="edit">
+                            <input type="checkbox" name="turno[0]" id="turno[0]" value="Manhã"/>Manhã<br/>
+                            <input type="checkbox" name="turno[1]" id="turno[1]" value="Tarde"/>Tarde<br/>
+                            <input type="checkbox" name="turno[2]" id="turno[2]" value="Noite"/>Noite<br/>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Outras Informações:</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label class="rotulos">Outas Informações:</label>                            
+                        </td>
+                        <td>
+                            <textarea name="comentarios" id="comentarios" rows="4" cols="40"></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Barra de Ferramentas:</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="submit" name="acao" value="Salvar" class="botoes"/>
+                            <input type="submit" name="acao" value="Cancelar" class="botoes"/>
+                            <input type="submit" name="acao" value="Voltar" class="botoes"/> 
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>         
+    </body>
+</html>
